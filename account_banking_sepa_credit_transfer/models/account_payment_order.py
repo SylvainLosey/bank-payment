@@ -114,7 +114,7 @@ class AccountPaymentOrder(models.Model):
                         'category_purpose': categ_purpose or 'NOcat',
                         'sepa': is_sepa,
                         'loop_index': str(loop_index)
-                    }, gen_args)
+                    }, gen_args, is_sepa)
             self.generate_party_block(
                 payment_info, 'Dbtr', 'B',
                 self.company_partner_bank_id, gen_args)

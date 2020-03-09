@@ -134,7 +134,7 @@ class AccountPaymentOrder(models.Model):
                         'requested_date': requested_date,
                         'sepa': is_sepa,
                         'loop_index': str(loop_index)
-                    }, gen_args)
+                    }, gen_args, is_sepa)
 
             self.generate_party_block(
                 payment_info, 'Cdtr', 'B',
